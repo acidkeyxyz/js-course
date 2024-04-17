@@ -5,3 +5,4 @@ function getEdad(nombre, edad) {
 		console.log(nombre + ' y Eres menor de edad');
 	}
 }
+getEdad('Luis', 34);
