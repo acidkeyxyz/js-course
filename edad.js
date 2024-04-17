@@ -5,8 +5,3 @@ function getEdad(nombre, edad) {
 		console.log(nombre + ' y Eres menor de edad');
 	}
 }
-
-function repitir(a, b) {
-	return a + b;
-}
-getEdad('Luis', 34);
