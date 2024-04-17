@@ -1,0 +1,18 @@
+label{
+	border: 1px solid blue;
+	padding: 8px;
+	margin: 4px;
+	border-radius: 24px;
+}
+
+label:hover{
+	background-color: red;
+}
+
+label:active{
+	background-color: red;
+}
+
+td{
+	height: 50px;
+}
