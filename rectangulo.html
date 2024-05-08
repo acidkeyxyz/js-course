@@ -1,0 +1,23 @@
+<body>
+	<h1>Calcula Area</h1>
+	
+	<label>Base</label> <input type="text" id="base"><br>
+	<label>altura</label> <input type="text" id="altura"><br>
+	<input type="button" onclick="calculaArea()" value="calcular area"><br>
+	<input type="button" onclick="calculaPerimetro()" value="calcular perimetro"><br>
+
+<script>
+function calculaArea(){
+	let base = document.getElementById('base').value;
+	let altura = document.getElementById('altura').value;
+	let area = base * altura;
+	alert('El area es: ' + area);
+}
+function calculaPerimetro(){
+	let base = document.getElementById('base').value;
+	let altura = document.getElementById('altura').value;
+	let perimetro = 2*base + 2*altura;
+	alert('El perimetro es: ' + perimetro);
+}
+</script>
+</body>
