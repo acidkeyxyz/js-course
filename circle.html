@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<title>My Website</title>
+</head>
+<body>
+	<h1>Calcula Circulo</h1>
+	
+	<label>Diametro</label> <input type="text" id="diametro"><br>
+	<input type="button" onclick="calculaArea()" value="calcular area"><br>
+	<input type="button" onclick="calculaPerimetro()" value="calcular perimetro"><br>
+
+<script>
+function calculaArea(){
+	let diametro = document.getElementById('diametro').value;
+	let area = Math.PI * Math.pow(diametro/2, 2);
+	alert('El area es: ' + area);
+}
+function calculaPerimetro(){
+	let diametro = document.getElementById('diametro').value;
+	let perimetro = Math.PI * diametro;
+	alert('El perimetro es: ' + perimetro);
+}
+</script>
+</body>
+</html>
