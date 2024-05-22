@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<title>My Website</title>
+</head>
+<body>
+	<h1 id="title" class="titulo">Calcula Maximo Comun Multiplo</h1>
+</body>
+<script type="text/javascript">
+	class Figura{
+		base;
+		altura;
+		constructor(base, altura){
+			this.base = base;
+			this.altura = altura;
+		}
+	}
+	class Rectangulo extends Figura{
+		constructor(base, altura){
+			super(base, altura);
+		}
+		calcularArea(){
+			return this.base * this.altura;
+		}
+	}
+	class Huevo {
+		color;
+		nombre;
+	}
+	class HuevoDeCreeper extends Huevo{
+		constructor(){
+			super();
+			this.color = 'verde';
+			this.nombre = 'Creeper';
+		}
+	}
+	class HuevoDeGallina extends Huevo{
+		constructor(){
+			super();
+			this.color = 'blanco';
+			this.nombre = 'Gallina';
+		}
+	}
+</script>
+</html>

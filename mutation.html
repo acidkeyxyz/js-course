@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<title>My Website</title>
+</head>
+<body>
+	<h1 id="title" class="titulo">Ejemplo de mutation observer</h1>
+</body>
+<script type="text/javascript">
+	const element = document.getElementById('title');
+	const callback = (mutations) => {
+		console.log('Cambio detectado');
+		mutations.forEach((mutation) => {
+			console.log(mutation);
+		});
+	};
+	const observer = new MutationObserver(callback);
+	const config = {
+		attributes: true
+	};
+	observer.observe(element, config);
+	console.log('Observando cambios en el titulo');
+</script>
+</html>
