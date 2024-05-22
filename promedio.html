@@ -1,66 +1,89 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="styles.css">
-	<title>My Website</title>
-</head>
-<body>
-	<h1>Calcula Promedio</h1>
-	
-	<label>Lista Enteros</label> <input type="text" id="enteros"><br>
-	<label>Lista ordenados</label> <input type="text" id="ordernados"><br>
-	<input type="button" onclick="calculaPromedio()" value="calcular promedio"><br>
-	<input type="button" onclick="calculaFashion()" value="calcular Moda"><br>
-	<input type="button" onclick="calculaMediana()" value="calcular Mediana"><br>
-	
-<script>
-function calculaPromedio(){
-	let enteros = document.getElementById('enteros').value;
-	let lista = enteros.split(',');
-	let suma = 0;
-	for(let i=0; i<lista.length; i++){
-		suma += parseInt(lista[i]);
-	}
-	let promedio = suma / lista.length;
-	alert('El promedio es: ' + promedio);
-}
-function calculaFashion(){
-	let enteros = document.getElementById('enteros').value;
-	let lista = enteros.split(',');
-	let moda = 0;
-	let modaFrecuencia = 0;
-	for(let i=0; i<lista.length; i++){
-		let frecuencia = 0;
-		for(let j=0; j<lista.length; j++){
-			if(lista[i] == lista[j]){
-				frecuencia++;
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css" />
+		<title>My Website</title>
+	</head>
+	<body>
+		<h1 id="title" class="titulo">Calcula Promedio</h1>
+		
+		<h1 id="title" class="titulo">Daynana</h1>
+		<h1 id="title" class="titulo">Zaid</h1>
+		<h1 id="title" class="titulo">Yane</h1>
+		<h1 id="title" class="titulo">Frida</h1>
+
+		<label>Lista Enteros</label> <input type="text" id="enteros" /><br />
+		<label>Lista ordenados</label> <input type="text" id="ordernados" /><br />
+		<input
+			type="button"
+			onclick="calculaPromedio()"
+			value="calcular promedio"
+		/><br />
+		<input
+			type="button"
+			onclick="calculaFashion()"
+			value="calcular Moda"
+		/><br />
+		<input
+			type="button"
+			onclick="calculaMediana()"
+			value="calcular Mediana"
+		/><br />
+
+		<script>
+			function calculaPromedio() {
+				let enteros = document.getElementById('enteros').value;
+				let lista = enteros.split(',');
+				let suma = 0;
+				for (let i = 0; i < lista.length; i++) {
+					suma += parseInt(lista[i]);
+				}
+				let promedio = suma / lista.length;
+				alert('El promedio es: ' + promedio);
 			}
-		}
-		if(frecuencia > modaFrecuencia){
-			moda = lista[i];
-			modaFrecuencia = frecuencia;
-		}
-	}
-	alert('La moda es: ' + moda);
-}
-function calculaMediana(){
-	let enteros = document.getElementById('enteros').value;
-	let lista = enteros.split(',');
-	lista.sort(function(a, b){return a-b});
-	let mediana = 0;
-	if(lista.length % 2 == 0){
-		let mitad = lista.length / 2;
-		mediana = (parseInt(lista[mitad-1]) + parseInt(lista[mitad])) / 2;
-	}else{
-		let mitad = Math.floor(lista.length / 2);
-		mediana = lista[mitad];
-	}
-	alert('La mediana es: ' + mediana);
-}
-</script>
-</body>
+			function calculaFashion() {
+				let enteros = document.getElementById('enteros').value;
+				let lista = enteros.split(',');
+				let moda = 0;
+				let modaFrecuencia = 0;
+				for (let i = 0; i < lista.length; i++) {
+					let frecuencia = 0;
+					for (let j = 0; j < lista.length; j++) {
+						if (lista[i] == lista[j]) {
+							frecuencia++;
+						}
+					}
+					if (frecuencia > modaFrecuencia) {
+						moda = lista[i];
+						modaFrecuencia = frecuencia;
+					}
+				}
+				alert('La moda es: ' + moda);
+			}
+			function calculaMediana() {
+				let enteros = document.getElementById('enteros').value;
+				let lista = enteros.split(',');
+				lista.sort(function (a, b) {
+					return a - b;
+				});
+				let mediana = 0;
+				if (lista.length % 2 == 0) {
+					let mitad = lista.length / 2;
+					mediana = (parseInt(lista[mitad - 1]) + parseInt(lista[mitad])) / 2;
+				} else {
+					let mitad = Math.floor(lista.length / 2);
+					mediana = lista[mitad];
+				}
+				alert('La mediana es: ' + mediana);
+			}
+			const element = document.getElementById('title');
+			const callback = function (mutationsList, observer) {
+				console.log('h1 changed');
+			};
+			const observer = new MutationObserver(callback);
+			observer.observe(element, { childList: true });
+		</script>
+	</body>
 </html>
