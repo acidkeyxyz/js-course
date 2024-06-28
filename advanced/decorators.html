@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<title>Decorator</title>
+</head>
+<body>
+	<body>
+		<h1 id="title" class="titulo">Ejemplo de un Decorator Javascript</h1>
+		<p style="color:red;">Para observar el comportamiento completo, se recomienda abrir la consola del explorador (Tecla F12)</p>
+	</body>
+</body>
+<script type="text/javascript">
+	@decorator
+class Persona{
+	name = '';
+	constructor(name){
+		this.name = name;
+	}
+	greet(){
+		return `Hola ${this.name}`;
+	}
+}
+
+</script>
+</html>

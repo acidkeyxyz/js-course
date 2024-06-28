@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<title>My Website</title>
+</head>
+<body>
+	<h1 id="title" class="titulo">Ejemplo de mutation observer</h1>
+</body>
+<script type="text/javascript">
+const iterable = [1, 2, 3];
+for (const value of iterable) {
+  console.log(value); // 1, 2, 3
+}
+
+function makeIterator(array) {
+  let index = 0;
+  return {
+    next: function() {
+      return index < array.length ?
+        { value: array[index++], done: false } :
+        { value: undefined, done: true };
+    }
+  };
+}
+
+const array = [10, 20, 30];
+const iterator = array[Symbol.iterator]();
+
+console.log(iterator.next()); // { value: 10, done: false }
+console.log(iterator.next()); // { value: 20, done: false }
+console.log(iterator.next()); // { value: 30, done: false }
+console.log(iterator.next()); // { value: undefined, done: true }
+
+const myIterable = {
+  [Symbol.iterator]: function() {
+    let step = 0;
+    return {
+      next: function() {
+        return step < 3 ? { value: ++step, done: false } : { value: undefined, done: true };
+      }
+    };
+  }
+};
+
+for (const value of myIterable) {
+  console.log(value); // 1, 2, 3
+}
+
+const evenNumbers = {
+  [Symbol.iterator]: function() {
+    let num = 0;
+    return {
+      next: function() {
+        num += 2;
+        return { value: num, done: false };
+      }
+    };
+  }
+};
+
+for (const value of evenNumbers) {
+  console.log(value); // 2, 4, 6, ...
+  if (value > 10) break; // Para evitar bucle infinito
+}
+
+
+</script>
+</html>

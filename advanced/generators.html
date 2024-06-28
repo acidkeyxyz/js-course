@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<title>Generator and Yield</title>
+</head>
+<body>
+	<h1 id="title" class="titulo">Ejemplo de Generator and Yield</h1>
+</body>
+<script type="text/javascript">
+	function* generarNumeros() {
+  yield 1;
+  yield 2;
+  yield 3;
+} 
+const generador = generarNumeros();
+console.log(generador.next().value); // 1
+console.log(generador.next().value); // 2
+console.log(generador.next().value); // 3
+console.log(generador.next().done); // true
+
+function* generarPares() {
+  let contador = 0;
+  while (true) {
+    yield contador += 2;
+  }
+}
+
+const generadorPares = generarPares();
+for (let i = 0; i < 10; i++) {
+  console.log(generadorPares.next().value);
+}
+
+function* leerArchivo(rutaArchivo) {
+  const archivo = fs.createReadStream(rutaArchivo);
+  for await (const linea of archivo) {
+    yield linea.toString();
+  }
+}
+
+const generadorLineas = leerArchivo('archivo.txt');
+for (const linea of generadorLineas) {
+  console.log(linea);
+}
+</script>
+</html>

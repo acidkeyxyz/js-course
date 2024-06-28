@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<title>My Website</title>
+</head>
+<body>
+	<body>
+		<h1 id="title" class="titulo">Ejemplo de </h1>
+		<p style="color:red;">Para observar el comportamiento completo, se recomienda abrir la consola del explorador (Tecla F12)</p>
+	</body>
+</body>
+<script>
+//funcion pura
+const sum = (a,b) => a + b;
+console.log(sum(2,3)); //5
+//funcion impura
+let c = 2;
+const sumImpure = (a) => a + c;
+console.log(sumImpure(3)); //5
+c = 3;
+console.log(sumImpure(3)); //6
+
+//inmutabilidad en Js
+const a = [1,2,3];
+const b = a.concat(4);
+console.log(a); //[1,2,3]
+console.log(b); //[1,2,3,4]
+//funciones de orden superior
+const suma = (a,b) => a + b;
+const resta = (a,b) => a - b;
+const operacion = (a,b,fn) => fn(a,b);
+console.log(operacion(2,3,suma)); //5
+console.log(operacion(2,3,resta)); //-1
+// prgramacion funcional en JS
+const numbers = [1, 2, 3];
+const doubled = numbers.map(n => n * 2);
+console.log(doubled); // [2, 4, 6]
+// funciones compuestas
+const multiply = (a, b) => a * b;
+const square = x => multiply(x, x);
+console.log(square(3)); // 9
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<title>Async/Await</title>
+</head>
+<body>
+	<h1 id="title" class="titulo">Ejemplo de Async/Await</h1>
+	<p style="color:red;">Para observar el comportamiento completo, se recomienda abrir la consola del explorador (Tecla F12)</p>
+</body>
+<script type="text/javascript">
+	// Async/Await
+	async function getAsyncData() {
+		let promise = new Promise((resolve, reject) => {
+			setTimeout(() => resolve("¡Datos obtenidos!"), 3000)
+		});
+
+		let result = await promise;
+		console.log(result);
+	}
+
+	getAsyncData();
+</script>
+</html>

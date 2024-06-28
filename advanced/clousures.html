@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<title>My Website</title>
+</head>
+<body>
+	<h1 id="title" class="titulo">Ejemplo de un closure en Javascript</h1>
+  <p style="color:red;">Para observar el comportamiento completo, se recomienda abrir la consola del explorador (Tecla F12)</p>
+</body>
+<script type="text/javascript">
+	function crearContador(valorInicial) {
+  let contador = valorInicial;
+  return function() {
+    contador++;
+    return contador;
+  };
+}
+
+const contador1 = crearContador(10);
+const contador2 = crearContador(20);
+
+console.log(contador1()); // 11
+console.log(contador1()); // 12
+console.log(contador2()); // 21
+console.log(contador1()); // 13
+
+// Scope global
+let variableGlobal = 'Valor global';
+
+function ejemploScope() {
+  // Scope de función
+  let variableFuncion = 'Valor de función';
+  console.log(variableGlobal); // 'Valor global'
+  console.log(variableFuncion); // 'Valor de función'
+}
+
+ejemploScope();
+
+// Scope de bloque
+{
+  let variableBloque = 'Valor de bloque';
+  console.log(variableBloque); // 'Valor de bloque'
+}
+
+// Scope de cadena
+const nombre = 'Juan';
+const saludo = `Hola ${nombre}`;
+console.log(saludo); // 'Hola Juan'
+</script>
+</html>
