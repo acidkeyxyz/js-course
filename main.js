@@ -81,22 +81,22 @@ const topics = [
 	},
 	{
 		name: 'Array Methods',
-		href: 'arrays/array-methods.html',
+		href: 'advanced/array-methods.html',
 		isShown: false,
 	},
 	{
 		name: 'Array Properties',
-		href: 'arrays/array-properties.html',
+		href: 'advanced/array-properties.html',
 		isShown: false,
 	},
 	{
 		name: 'Prototypes',
-		href: 'arrays/prototypes.html',
+		href: 'advanced/prototypes.html',
 		isShown: false,
 	},
 	{
 		name: 'Array Static Methods',
-		href: 'arrays/array-static-methods.html',
+		href: 'advanced/array-static-methods.html',
 		isShown: false,
 	},
 	{
@@ -106,22 +106,22 @@ const topics = [
 	},
 	{
 		name: 'Array',
-		href: 'arrays/array.html',
+		href: 'advanced/array.html',
 		isShown: false,
 	},
 	{
 		name: 'Async Iterators',
-		href: 'async-iterators/async-iterators.html',
+		href: 'advanced/async-iterators.html',
 		isShown: false,
 	},
 	{
 		name: 'Iterators',
-		href: 'async-iterators/iterators.html',
+		href: 'advanced/iterators.html',
 		isShown: true,
 	},
 	{
 		name: 'Maps',
-		href: 'collections/maps.html',
+		href: 'advanced/maps.html',
 		isShown: false,
 	},
 	{
@@ -131,22 +131,22 @@ const topics = [
 	},
 	{
 		name: 'WeakMaps',
-		href: 'collections/weakmaps.html',
+		href: 'advanced/weakmaps.html',
 		isShown: false,
 	},
 	{
 		name: 'WeakSets',
-		href: 'collections/weaksets.html',
+		href: 'advanced/weaksets.html',
 		isShown: false,
 	},
 	{
 		name: 'Date',
-		href: 'date/date.html',
+		href: 'advanced/date.html',
 		isShown: false,
 	},
 	{
 		name: 'Intl',
-		href: 'date/intl.html',
+		href: 'advanced/intl.html',
 		isShown: false,
 	},
 	{
@@ -156,12 +156,12 @@ const topics = [
 	},
 	{
 		name: 'Math',
-		href: 'date/math.html',
+		href: 'advanced/math.html',
 		isShown: false,
 	},
 	{
 		name: 'Number',
-		href: 'date/number.html',
+		href: 'advanced/number.html',
 		isShown: false,
 	},
 	{
@@ -171,42 +171,42 @@ const topics = [
 	},
 	{
 		name: 'String',
-		href: 'date/string.html',
+		href: 'advanced/string.html',
 		isShown: false,
 	},
 	{
 		name: 'Web Storage',
-		href: 'date/web-storage.html',
+		href: 'advanced/web-storage.html',
 		isShown: false,
 	},
 	{
 		name: 'Window',
-		href: 'date/window.html',
+		href: 'advanced/window.html',
 		isShown: false,
 	},
 	{
 		name: 'Worker',
-		href: 'date/worker.html',
+		href: 'advanced/worker.html',
 		isShown: false,
 	},
 	{
 		name: 'XMLHttpRequest',
-		href: 'date/xmlhttprequest.html',
+		href: 'advanced/xmlhttprequest.html',
 		isShown: false,
 	},
 	{
 		name: 'Web Components',
-		href: 'dom/web-components.html',
+		href: 'advanced/web-components.html',
 		isShown: false,
 	},
 	{
 		name: 'DOM',
-		href: 'dom/dom.html',
+		href: 'advanced/dom.html',
 		isShown: false,
 	},
 	{
 		name: 'Event Loop',
-		href: 'dom/eventLoop.html',
+		href: 'advanced/eventLoop.html',
 		isShown: true,
 	},
 	{
@@ -226,57 +226,57 @@ const topics = [
 	},
 	{
 		name: 'Shadow DOM',
-		href: 'dom/shadow-dom.html',
+		href: 'advanced/shadow-dom.html',
 		isShown: false,
 	},
 	{
 		name: 'Web Components',
-		href: 'dom/web-components.html',
+		href: 'advanced/web-components.html',
 		isShown: false,
 	},
 	{
 		name: 'Web Workers',
-		href: 'dom/web-workers.html',
+		href: 'advanced/web-workers.html',
 		isShown: false,
 	},
 	{
 		name: 'Canvas',
-		href: 'graphics/canvas.html',
+		href: 'advanced/canvas.html',
 		isShown: false,
 	},
 	{
 		name: 'SVG',
-		href: 'graphics/svg.html',
+		href: 'advanced/svg.html',
 		isShown: false,
 	},
 	{
 		name: 'WebGL',
-		href: 'graphics/webgl.html',
+		href: 'advanced/webgl.html',
 		isShown: false,
 	},
 	{
 		name: 'Audio',
-		href: 'media/audio.html',
+		href: 'advanced/audio.html',
 		isShown: false,
 	},
 	{
 		name: 'Video',
-		href: 'media/video.html',
+		href: 'advanced/video.html',
 		isShown: false,
 	},
 	{
 		name: 'IndexedDB',
-		href: 'storage/indexeddb.html',
+		href: 'advanced/indexeddb.html',
 		isShown: false,
 	},
 	{
 		name: 'Cookies',
-		href: 'storage/cookies.html',
+		href: 'advanced/cookies.html',
 		isShown: false,
 	},
 	{
 		name: 'Local Storage',
-		href: 'storage/local-storage.html',
+		href: 'advanced/local-storage.html',
 		isShown: false,
 	},
 	{
@@ -286,27 +286,27 @@ const topics = [
 	},
 	{
 		name: 'Web Storage',
-		href: 'storage/web-storage.html',
+		href: 'advanced/web-storage.html',
 		isShown: false,
 	},
 	{
 		name: 'Web Sockets',
-		href: 'websockets/websockets.html',
+		href: 'advanced/websockets.html',
 		isShown: false,
 	},
 	{
 		name: 'Fetch API',
-		href: 'fetch-api/fetch-api.html',
+		href: 'advanced/fetch-api.html',
 		isShown: false,
 	},
 	{
 		name: 'Service Workers',
-		href: 'service-workers/service-workers.html',
+		href: 'advanced/service-workers.html',
 		isShown: false,
 	},
 	{
 		name: 'WebRTC',
-		href: 'webrtc/webrtc.html',
+		href: 'advanced/webrtc.html',
 		isShown: false,
 	},
 	{
