@@ -3,7 +3,7 @@
 ## Contenido del Curso
 
 
-| Month    | Savings |
+| # de Clase    | Link |
 | -------- | ------- |
 | Clase 1  | [Historia de la computación](https://docs.google.com/presentation/d/19LE2jvyn_L0N94ai8yfunUAZ93yzALHcrQRjqYu1sgc/edit?usp=sharing)    |
 | Clase 2 | [Introducción a la programación](https://docs.google.com/presentation/d/1DDll6_d6B9e1IxpLjrJNKur9tPuAW3U4UkUqdAlojRg/edit?usp=sharing)    |
