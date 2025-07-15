@@ -11,4 +11,4 @@
 | Clase 4  | [Introducción a los algoritmos?](https://docs.google.com/presentation/d/1mIR5zg-U77WwUZ9NZSBhK-zRW2LZBMPz1ALePH5vDLc/edit?usp=sharing)   |
 | Clase 5  | [Compuertas logicas](https://docs.google.com/presentation/d/1ND6YS7yf9XgF1Ko_fhwMANkvSPFSccgKvU1rwVtl5fQ/edit?usp=sharing)   |
 | Clase 5  | [CSS Course](https://docs.google.com/presentation/d/1pkhxOGVT9XcU6rH7RLYPkX1VA0uvu9fLbitML_9iK1o/edit?usp=sharing)   |
-| Clase 5  | [Brief History of JS ](https://docs.google.com/presentation/d/1VcZPeqjWkQQOOKtOCbUZQUCpfso6uzItpzc6YRAuhZo/edit?usp=sharing)   |
+| Siguiente Clase | [Brief History of JS ](https://docs.google.com/presentation/d/1VcZPeqjWkQQOOKtOCbUZQUCpfso6uzItpzc6YRAuhZo/edit?usp=sharing)   |
