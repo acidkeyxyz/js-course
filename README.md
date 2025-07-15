@@ -1,6 +1,6 @@
-### ESTE es un repositorio para aprender Javascript de 0
+# ESTE es un repositorio para aprender Frontend
 
-### index
+## Contenido del Curso
 
 
 | Month    | Savings |
