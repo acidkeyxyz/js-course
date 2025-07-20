@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>My Website</title>
+</head>
+
+<body>
+  <h1 id="title" class="titulo">Ejemplo de proxy en Javascript</h1>
+</body>
+<script>
+// example of partial application
+function multiply(a, b) {
+	return a * b;
+}
+function partialMultiply(a) {
+	return function(b) {
+		return multiply(a, b);
+	};
+}
+const double = partialMultiply(2);
+console.log(double(5)); // Outputs: 10
+
+// example of currying
+function add(a) {
+  return function(b) {
+    return function(c) {
+      return a + b + c;
+    };
+  };
+}
+const addFive = add(5);
+const addTen = addFive(5);
+console.log(addTen(5)); // Outputs: 15
+
+
+
+</script>
+
+</html>
