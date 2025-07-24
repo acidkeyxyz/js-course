@@ -1,17 +1,21 @@
-
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="styles.css">
-	<title>My Website</title>
+	<title>Cuadrado</title>
 </head>
+
 <body>
-	<body>
-		<h1 id="title" class="titulo">Ejemplos</h1>
-	</body>
+	<h1 id="title">Cuadrado</h1>
+	<input id="base" type="text" value="0" placeholder="logitud de Lado"></input>
+	<input type="button" onclick="calcularArea()" value="calcular area"></input>
 </body>
-<script type="text/javascript" src="main.js"></script>
+<script>
+		function calcularArea(){
+				let base =  document.querySelector("#base").value;
+				base = parseFloat(base);
+				let result = Math.pow(base,2); //base^2
+				alert(`el area es ${result}`);
+		}
+	</script>
 </html>

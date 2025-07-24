@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rectangulo</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function calcularArea(base, altura) {
+        return base * altura;
+    }
+    function calculaPerimetro(base, altura) {
+        return 2 * base + 2 * altura;
+    }
+    // guardar el cuadrado de n**2  donde n = 0-100;
+    let results = [];
+    debugger;
+    for (let i = 1; i <= 10; i++) {
+        results[i] = `area del rectangulo base=${3} altura=${i} area=${calcularArea(3, i)} m2`;
+        document.querySelector("body").innerHTML += results[i];
+        document.querySelector("body").innerHTML += "<br/>";
+    }       
+
+     for (let i = 1; i <= 10; i++) {
+        results[i] = `perimetro del rectangulo base=${3} altura=${i} perimetro=${calculaPerimetro(3, i)} m`;
+        document.querySelector("body").innerHTML += results[i];
+        document.querySelector("body").innerHTML += "<br/>";
+    }
+</script>
+
+</html>

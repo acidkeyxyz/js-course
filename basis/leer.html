@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lectura Rapida</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        h1 {
+            font-size: 2em;
+            color: #333;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        #palabra-actual {
+            font-size: 3em;
+            color: #000;
+            margin-top: 20px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        #palabra-actual {
+            animation: fadeIn 1s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Lectura Rapida</h1>
+        <p>Van a ir apareciendo palabras en la pantalla.</p>
+        <h1 id="palabra-actual"></h1>
+</body>
+<script src="words.js"></script>
+<script>
+    let indicePalabra = 0;
+    const urlParams = new URLSearchParams(window.location.search);
+    const length = urlParams.get('length');
+    const speed = urlParams.get('speed') || 1000; // default speed is 1000ms
+    const less = urlParams.get('less') || false; // default is false
+    if (length) {
+        // show only words with the specified length or less
+        words2show = less ?
+            words.filter(palabra => palabra.length <= parseInt(length)) :
+            words.filter(palabra => palabra.length === parseInt(length));
+    }
+
+    function mostrarPalabra() {
+        const contenedor = document.getElementById("palabra-actual");
+        contenedor.innerText = words2show[indicePalabra];
+        indicePalabra = (indicePalabra + 1) % words2show.length;
+    }
+
+    setInterval(mostrarPalabra, speed);
+    // from queryparams words=3
+    //words.json has a list of words in const words array
+
+</script>
+
+</html>
