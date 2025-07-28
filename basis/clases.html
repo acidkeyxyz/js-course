@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    console.log("hola")
+		// new structure ES2022
+		class Rectangulo {
+			#perimetro = 0;
+			#area = 0;
+			#base = 0;
+			#altura = 0;
+			constructor(base, altura) {
+				this.#base = base;
+				this.#altura = altura;
+			}
+			calculaArea() {
+				this.#area = this.#base * this.#altura;
+				return this.#area;
+			}
+		}
+
+		const rectangulo = new Rectangulo(3, 4);
+		const area = rectangulo.calculaArea();
+</script>
+</html>
