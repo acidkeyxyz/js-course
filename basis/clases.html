@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Clases</title>
 </head>
 
 <body>
@@ -37,6 +37,33 @@
         const perimetro = rectangulo.calcularPerimetro();
         console.info("area del rectangulo:",rectangulo);
     }
+    debugger;
+    class Persona{
+        #name;
+        #age;
+        #dateOfBirth;
+
+        constructor(name,age,dateOfBirth){
+            this.#name =name;
+            this.#age = age;
+            this.#dateOfBirth = dateOfBirth;
+        }
+        getName(){
+            return this.#name;
+        }
+        getAge(){
+            return this.#age;
+        }
+        getDateOfBirth(){
+            return this.#dateOfBirth;
+        }
+    }
+
+    const diana = new Persona("Diana",16,new Date(2007,1,1));  // Year, Month, Day
+    console.log(diana.getName());
+    console.log(diana.getAge());
+    console.log(diana.getDateOfBirth());
+
 </script>
 
 </html>
