@@ -1,32 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+
 </body>
 <script>
     console.log("hola")
-		// new structure ES2022
-		class Rectangulo {
-			#perimetro = 0;
-			#area = 0;
-			#base = 0;
-			#altura = 0;
-			constructor(base, altura) {
-				this.#base = base;
-				this.#altura = altura;
-			}
-			calculaArea() {
-				this.#area = this.#base * this.#altura;
-				return this.#area;
-			}
-		}
+    // new structure ES2022
+    class Rectangulo {
+        #perimetro = 0;
+        #area = 0;
+        #base = 0;
+        #altura = 0;
+        constructor(base, altura) {
+            this.#base = base;
+            this.#altura = altura;
+        }
+        calculaArea() {
+            this.#area = this.#base * this.#altura;
+            return this.#area;
+        }
+        calcularPerimetro() {
+            this.#perimetro = 2 * this.#base + 2 * this.#altura;
+        }
+    }
 
-		const rectangulo = new Rectangulo(3, 4);
+    for (let altura = 2; altura < 10; altura++) {
+        const rectangulo = new Rectangulo(3, altura);
 		const area = rectangulo.calculaArea();
+        const perimetro = rectangulo.calcularPerimetro();
+        console.info("area del rectangulo:",rectangulo);
+    }
 </script>
+
 </html>
